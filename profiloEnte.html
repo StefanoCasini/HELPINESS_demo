@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profilo Ente - Ente Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+            color: #004d40;
+        }
+        .header {
+            background: linear-gradient(135deg, #00796b, #004d40);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+        .header .menu-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            font-size: 30px;
+            color: white;
+            cursor: pointer;
+        }
+        .menu {
+            display: none;
+            position: absolute;
+            top: 50px;
+            right: 20px;
+            background: white;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            list-style: none;
+            padding: 5px 0;
+            z-index: 10;
+        }
+        .menu li {
+            padding: 8px 15px;
+            cursor: pointer;
+            color: #004d40; /* Colore delle voci del menù */
+        }
+        .menu li:hover {
+            background: #eee;
+        }
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .bio-section {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .bio-section p {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.5;
+        }
+        .edit-button {
+            background: #00796b;
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        .projects-section {
+            margin-top: 20px;
+        }
+        .project-card {
+            position: relative;
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-bottom: 15px;
+        }
+        .menu-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: none;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .menu {
+            display: none;
+            position: absolute;
+            top: 30px;
+            right: 10px;
+            background: white;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            list-style: none;
+            padding: 5px 0;
+        }
+        .menu li {
+            padding: 8px 15px;
+            cursor: pointer;
+            color: #004d40; /* Colore delle voci del menù */
+        }
+        .menu li:hover {
+            background: #eee;
+        }
+        .progress-container {
+            width: 100%;
+            background: #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-top: 10px;
+        }
+        .progress-bar {
+            height: 20px;
+            background: #00796b;
+            text-align: center;
+            color: white;
+            line-height: 20px;
+        }
+        .goal-text {
+            font-size: 14px;
+            font-weight: bold;
+            margin-top: 5px;
+            text-align: center;
+        }
+        .buttons {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .action-button {
+            background: #004d40;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            display: inline-block;
+            margin: 10px;
+        }
+        .footer {
+            background-color: #004d40;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+    </style>
+    <script>
+        function toggleMenu(id) {
+            var menu = document.getElementById(id);
+            menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</head>
+<body>
+    <div class="header">
+        <h1>Profilo Ente</h1>
+        <!-- Pulsante del menù a tendina -->
+        <button class="menu-button" onclick="toggleMenu('dropdownMenu')">☰</button>
+        <!-- Menù a tendina -->
+        <ul id="dropdownMenu" class="menu">
+            <li>Aree di competenza</li>
+            <li>Informazioni generali</li>
+        </ul>
+    </div>
+    <div class="container">
+        <div class="bio-section">
+            <h2>Chi siamo</h2>
+            <p>Ente Test è un'organizzazione impegnata nel supporto delle comunità in difficoltà. Attraverso vari progetti, ci dedichiamo a migliorare la qualità della vita delle persone.</p>
+            <a href="#" class="edit-button">Modifica bio</a>
+        </div>
+        <div class="projects-section">
+            <h2>Progetti Attivi</h2>
+            <div class="project-card">
+                <button class="menu-button" onclick="toggleMenu('menu1')">☰</button>
+                <ul id="menu1" class="menu">
+                    <li>Elimina</li>
+                    <li>Chiudi</li>
+                </ul>
+                <h3>Progetto 1</h3>
+                <p>Descrizione breve del progetto.</p>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 60%;">60%</div>
+                </div>
+                <p class="goal-text">Raccolti: €1.800 di €3.000</p>
+            </div>
+            <div class="project-card">
+                <button class="menu-button" onclick="toggleMenu('menu2')">☰</button>
+                <ul id="menu2" class="menu">
+                    <li>Elimina</li>
+                    <li>Chiudi</li>
+                </ul>
+                <h3>Progetto 2</h3>
+                <p>Descrizione breve del progetto.</p>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 80%;">80%</div>
+                </div>
+                <p class="goal-text">Raccolti: €4.000 di €5.000</p>
+            </div>
+            <div class="project-card">
+                <button class="menu-button" onclick="toggleMenu('menu3')">☰</button>
+                <ul id="menu3" class="menu">
+                    <li>Elimina</li>
+                    <li>Chiudi</li>
+                </ul>
+                <h3>Progetto 3</h3>
+                <p>Descrizione breve del progetto.</p>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 40%;">40%</div>
+                </div>
+                <p class="goal-text">Raccolti: €2.000 di €5.000</p>
+            </div>
+        </div>
+        <div class="buttons">
+            <a href="#" class="action-button">Crea Nuovo Progetto</a>
+            <a href="#" class="action-button">Storico Progetti Chiusi</a>
+        </div>
+    </div>
+</body>
+</html>
