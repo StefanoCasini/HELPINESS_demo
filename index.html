@@ -26,12 +26,21 @@
             padding-left: 20px;
         }
         .menu {
-            margin-left: 20px;
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+        }        
+        .menu {
+            margin-left: auto;
+            margin-right: 20px; /* Impedisce che il menu sia troppo attaccato al bordo */
+            display: flex;
+            align-items: center;
         }
+        
         .dropdown {
             position: relative;
-            display: inline-block;
         }
+        
         .dropdown-button {
             background-color: #00796b;
             color: white;
@@ -42,6 +51,8 @@
             border-radius: 5px;
         }
         .dropdown-content {
+            right: 0; /* Allinea il menu tendina a destra */
+            left: auto; /* Impedisce che si espanda verso sinistra */
             display: none;
             position: absolute;
             background-color: white;
@@ -116,8 +127,8 @@
             <div class="dropdown">
                 <button class="dropdown-button">Area Riservata</button>
                 <div class="dropdown-content">
-                    <a href="logEnti.html">Area Riservata Enti</a>
-                    <a href="logAziende.html">Area Riservata Aziende</a>
+                    <a href="logEnti.html">Enti</a>
+                    <a href="logAziende.html">Aziende</a>
                 </div>
             </div>
         </div>

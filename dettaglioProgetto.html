@@ -13,13 +13,18 @@
             color: #004d40;
         }
         .header {
-            background: linear-gradient(135deg, #00796b, #004d40);
+            background-color: #00796b;
             color: white;
-            font-size:xx-large;
             padding: 20px;
-            text-align: center;
-    
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            position: relative;
         }
+        .header h1 {
+            margin: 0;
+            padding-left: 20px;
+        }       
         .container {
             max-width: 900px;
             margin: 20px auto;
@@ -56,6 +61,17 @@
             font-weight: bold;
             color: black;
         }
+        .project-title {
+            background-color: #00796b; /* Verde */
+            color: white; /* Testo bianco */
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        
         .goal-text {
             margin-top: 10px;
             font-size: 16px;
@@ -109,11 +125,14 @@
     </style>
 </head>
 <body>
+    
     <div class="header">
-        Progetto Green Future
+        <h1><a href="index.html" style="color: white; text-decoration: none;">HELPINESS</a></h1>
     </div>
+    
     <div class="container">
         <div class="content">
+            <div class="project-title">Progetto Green Future</div>
             <p class="description">Il Progetto Test è un'iniziativa dell'Ente Test per supportare le persone in difficoltà. Attraverso il nostro impegno, vogliamo fornire risorse essenziali e supporto per chi ne ha più bisogno.</p>
             <img src="https://via.placeholder.com/750x400" alt="Immagine del progetto" width="100%" style="border-radius: 10px; margin-top: 10px;">
             <a href="#" class="ente-link">Ente Test</a>

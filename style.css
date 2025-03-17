@@ -50,3 +50,55 @@ button:hover {
     background: linear-gradient(90deg, #1565c0, #2e7d32);
     transform: scale(1.05);
 }
+
+.main-header {
+    background-color: #004d40; /* Verde scuro */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logo a {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: #80cbc4; /* Verde chiaro */
+}
+
+.cta {
+    display: flex;
+    align-items: center;
+}
+
+.donate-btn {
+    background-color: #00796b; /* Verde */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
+}
+
+.donate-btn:hover {
+    background-color: #005f56; /* Verde più scuro */
+}

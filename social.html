@@ -18,7 +18,14 @@
             background-color: #00796b;
             color: white;
             padding: 20px;
-            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .header h1 {
+            margin: 0;
+            padding-left: 20px;
         }
 
         .invest-section {
@@ -29,9 +36,10 @@
         .invest-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            /* Aggiunge spazio tra i blocchi */
+            max-width: 1200px;
+            margin: auto;
             padding: 20px;
+            gap: 30px;
         }
 
         .invest-block {
@@ -43,9 +51,7 @@
             display: flex;
             flex-direction: column;
             height: 90%;
-            /* Garantisce che tutti i div abbiano la stessa altezza */
             align-items: center;
-            /* Centra gli elementi orizzontalmente */
         }
 
         .invest-block h2 {
@@ -64,18 +70,35 @@
             padding: 10px 20px;
             text-decoration: none;
             border-radius: 5px;
-            display: inline-block;
             max-width: 150px;
-            /* Imposta una larghezza massima */
             width: 100%;
-            /* Mantiene una larghezza proporzionata */
             margin-top: auto;
-            /* Spinge il bottone in basso */
             text-align: center;
         }
 
         .invest-button:hover {
             background: #1e88e5;
+        }
+
+        .pagination {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .pagination button {
+            background-color: #00796b;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .pagination button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
         }
 
         .footer {
@@ -90,150 +113,84 @@
 
 <body>
     <div class="header">
-        <h1>HELPINESS</h1>
+        <h1><a href="index.html" style="color: white; text-decoration: none;">HELPINESS</a></h1>
     </div>
     <div class="invest-section">
         <h2>Scopri le opportunità di investimento</h2>
         <p>Aiutaci a creare un impatto positivo investendo nei nostri progetti.</p>
-        <div class="invest-grid">
-            <div class="invest-block">
-                <h2>Green Future</h2>
-                <p class="invest-ente">Caritas</p>
-                <p>Fondi per la riqualificazione della sede.</p>
-                <a href="dettaglioProgetto.html" class="invest-button">Dettagli</a>
-            </div>
-            <div class="invest-block">
-                <h2>Inclusione e Comunità</h2>
-                <p class="invest-ente">UNICEF</p>
-                <p>Supporto alle famiglie in difficoltà economica.</p>
-                <a href="#" class="invest-button">Dettagli</a>
-            </div>
-            <div class="invest-block">
-                <h2>Innovazione Tecnologica</h2>
-                <p class="invest-ente">Fondazione Innovazione</p>
-                <p>Promuovere nuove tecnologie ecosostenibili.</p>
-                <a href="#" class="invest-button">Dettagli</a>
-            </div>
-            <div class="invest-block">
-                <h2>Scuola per Tutti</h2>
-                <p class="invest-ente">Save the Children</p>
-                <p>Creazione di borse di studio per studenti bisognosi.</p>
-                <a href="#" class="invest-button">Dettagli</a>
-            </div>
-            <div class="invest-block">
-                <h2>Alimentazione Sana</h2>
-                <p class="invest-ente">Banco Alimentare</p>
-                <p>Distribuzione di pasti sani nelle scuole.</p>
-                <a href="#" class="invest-button">Dettagli</a>
-            </div>
-            <div class="invest-block">
-                <h2>Energia Pulita</h2>
-                <p class="invest-ente">WWF</p>
-                <p>Installazione di pannelli solari in comunità remote.</p>
-                <a href="#" class="invest-button">Dettagli</a>
-            </div>
-            <div class="invest-block">
-                <h2>Acqua per Tutti</h2>
-                <p class="invest-ente">Croce Rossa</p>
-                <p>Fornitura di acqua potabile nei villaggi.</p><a href="#" class="invest-button">Dettagli</a>
-            </div>
-            <div class="invest-block">
-                <h2>Sport per i Giovani</h2>
-                <p class="invest-ente">Fondazione Sportiva</p>
-                <p>Costruzione di centri sportivi inclusivi.</p><a href="#" class="invest-button">Dettagli</a>
-            </div>
-            <div class="invest-block">
-                <h2>Foreste Vive</h2>
-                <p class="invest-ente">Greenpeace</p>
-                <p>Piantumazione di nuovi alberi per il pianeta.</p><a href="#" class="invest-button">Dettagli</a>
-            </div>
-            <div class="invest-block">
-                <h2>Case per Famiglie</h2>
-                <p class="invest-ente">Habitat for Humanity</p>
-                <p>Costruzione di case per famiglie senzatetto.</p>
-                <a href="#" class="invest-button">Dettagli</a>
-            </div>
-            <div class="invest-block">
-                <h2>Cura degli Animali</h2>
-                <p class="invest-ente">LAV</p>
-                <p>Salvataggio di animali maltrattati.</p><a href="#" class="invest-button">Dettagli</a>
-            </div>
-            <div class="invest-block">
-                <h2>Arte e Cultura</h2>
-                <p class="invest-ente">Fondazione Cultura</p>
-                <p>Restauro di opere d'arte e musei.</p><a href="#" class="invest-button">Dettagli</a>
-            </div>
-            <div class="invest-block">
-                <h2>Educazione Digitale</h2>
-                <p class="invest-ente">Google.org</p>
-                <p>Corsi di tecnologia per giovani.</p><a href="#" class="invest-button">Dettagli</a>
-            </div>
-            <div class="invest-block">
-                <h2>Trasporti Sostenibili</h2>
-                <p class="invest-ente">Tesla Foundation</p>
-                <p>Incentivi per l'uso di veicoli elettrici.</p><a href="#" class="invest-button">Dettagli</a>
-            </div>
-            <div class="invest-block">
-                <h2>Ricerca sul Cancro</h2>
-                <p class="invest-ente">AIRC</p>
-                <p>Finanziamento di studi oncologici.</p><a href="#" class="invest-button">Dettagli</a>
-            </div>
-            <div class="invest-block">
-                <h2>Stop Inquinamento</h2>
-                <p class="invest-ente">Legambiente</p>
-                <p>Progetti per ridurre la plastica negli oceani.</p><a href="#" class="invest-button">Dettagli</a>
-            </div>
-            <div class="invest-block">
-                <h2>Parità di Genere</h2>
-                <p class="invest-ente">ONU Women</p>
-                <p>Programmi per l’empowerment femminile.</p><a href="#" class="invest-button">Dettagli</a>
-            </div>
-            <div class="invest-block">
-                <h2>Salute Mentale</h2>
-                <p class="invest-ente">Mind Foundation</p>
-                <p>Supporto psicologico per giovani e adulti.</p><a href="#" class="invest-button">Dettagli</a>
-            </div>
-            <div class="invest-block">
-                <h2>Accesso all'Istruzione</h2>
-                <p class="invest-ente">Ente: UNESCO</p>
-                <p>Costruzione di scuole in zone rurali.</p><a href="#" class="invest-button">Dettagli</a>
-            </div>
-            <div class="invest-block">
-                <h2>Energia per Ospedali</h2>
-                <p class="invest-ente">Ente: Medici Senza Frontiere</p>
-                <p>Installazione di energia solare negli ospedali.</p>
-                <a href="#" class="invest-button">Dettagli</a>
-            </div>
-            <div class="invest-block">
-                <h2>Recupero Alimentare</h2>
-                <p class="invest-ente">Ente: Food for All</p>
-                <p>Riduzione dello spreco alimentare nei supermercati.</p>
-                <a href="#" class="invest-button">Dettagli</a>
-            </div>
-            <div class="invest-block">
-                <h2>Protezione degli Oceani</h2>
-                <p class="invest-ente">Ente: Sea Shepherd</p>
-                <p>Difesa della fauna marina e lotta alla pesca illegale.</p>
-                <a href="#" class="invest-button">Dettagli</a>
-            </div>
-            <div class="invest-block">
-                <h2>Supporto ai Rifugiati</h2>
-                <p class="invest-ente">Ente: UNHCR</p>
-                <p>Costruzione di alloggi sicuri per rifugiati.</p>
-                <a href="#" class="invest-button">Dettagli</a>
-            </div>
-            <div class="invest-block">
-                <h2>Cyber Sicurezza per Bambini</h2>
-                <p class="invest-ente">Ente: Save the Children</p>
-                <p>Programmi di educazione digitale per la sicurezza online.</p>
-                <a href="#" class="invest-button">Dettagli</a>
-            </div>
-
+        <div class="invest-grid" id="invest-grid">
+            <!-- I progetti verranno inseriti qui dinamicamente -->
+        </div>
+        <div class="pagination">
+            <button id="prevPage" onclick="changePage(-1)" disabled>Pagina Precedente</button>
+            <button id="nextPage" onclick="changePage(1)">Pagina Successiva</button>
         </div>
     </div>
     <div class="footer">
         <p>&copy; 2025 HELPINESS. Tutti i diritti riservati.</p>
     </div>
+
+    <script>
+        // Lista dei progetti
+        const projects = [
+            { title: "Green Future", ente: "Caritas", desc: "Fondi per la riqualificazione della sede.", link: "dettaglioProgetto.html"},
+            { title: "Inclusione e Comunità", ente: "UNICEF", desc: "Supporto alle famiglie in difficoltà economica.", link: "comingSoon.html"},
+            { title: "Innovazione Tecnologica", ente: "Fondazione Innovazione", desc: "Nuove tecnologie ecosostenibili.", link: "comingSoon.html"},
+            { title: "Scuola per Tutti", ente: "Save the Children", desc: "Borse di studio per studenti bisognosi.", link: "comingSoon.html"},
+            { title: "Alimentazione Sana", ente: "Banco Alimentare", desc: "Distribuzione di pasti sani nelle scuole.", link: "comingSoon.html"},
+            { title: "Energia Pulita", ente: "WWF", desc: "Pannelli solari in comunità remote.", link: "comingSoon.html"},
+            { title: "Acqua per Tutti", ente: "Croce Rossa", desc: "Fornitura di acqua potabile nei villaggi.", link: "comingSoon.html"},
+            { title: "Sport per i Giovani", ente: "Fondazione Sportiva", desc: "Centri sportivi inclusivi.", link: "comingSoon.html"},
+            { title: "Foreste Vive", ente: "Greenpeace", desc: "Piantumazione di nuovi alberi.", link: "comingSoon.html"},
+            { title: "Case per Famiglie", ente: "Habitat for Humanity", desc: "Costruzione di case per senzatetto.", link: "comingSoon.html"},
+            { title: "Cura degli Animali", ente: "LAV", desc: "Salvataggio di animali maltrattati.", link: "comingSoon.html"},
+            { title: "Arte e Cultura", ente: "Fondazione Cultura", desc: "Restauro di opere d'arte e musei.", link: "comingSoon.html"},
+            { title: "Educazione Digitale", ente: "Google.org", desc: "Corsi di tecnologia per giovani.", link: "comingSoon.html"},
+            { title: "Trasporti Sostenibili", ente: "Tesla Foundation", desc: "Incentivi per veicoli elettrici.", link: "comingSoon.html"},
+            { title: "Ricerca sul Cancro", ente: "AIRC", desc: "Finanziamento di studi oncologici.", link: "comingSoon.html"},
+            { title: "Stop Inquinamento", ente: "Legambiente", desc: "Riduzione della plastica negli oceani.", link: "comingSoon.html"},
+            { title: "Parità di Genere", ente: "ONU Women", desc: "Empowerment femminile.", link: "comingSoon.html"},
+            { title: "Salute Mentale", ente: "Mind Foundation", desc: "Supporto psicologico.", link: "comingSoon.html"},
+            { title: "Accesso all'Istruzione", ente: "UNESCO", desc: "Scuole in zone rurali.", link: "comingSoon.html"},
+            { title: "Energia per Ospedali", ente: "Medici Senza Frontiere", desc: "Energia solare negli ospedali.", link: "comingSoon.html"},
+            { title: "Recupero Alimentare", ente: "Food for All", desc: "Riduzione dello spreco alimentare.", link: "comingSoon.html"},
+            { title: "Protezione degli Oceani", ente: "Sea Shepherd", desc: "Difesa della fauna marina.", link: "comingSoon.html"},
+            { title: "Supporto ai Rifugiati", ente: "UNHCR", desc: "Alloggi sicuri per rifugiati.", link: "comingSoon.html"}
+        ];
+
+        let currentPage = 0;
+        const projectsPerPage = 12;
+
+        function renderProjects() {
+            const grid = document.getElementById("invest-grid");
+            grid.innerHTML = "";
+
+            const start = currentPage * projectsPerPage;
+            const end = start + projectsPerPage;
+            const pageProjects = projects.slice(start, end);
+
+            pageProjects.forEach(proj => {
+                grid.innerHTML += `
+                    <div class="invest-block">
+                        <h2>${proj.title}</h2>
+                        <p class="invest-ente">${proj.ente}</p>
+                        <p>${proj.desc}</p>
+                        <a href="${proj.link}" class="invest-button">Dettagli</a>
+                    </div>
+                `;
+            });
+
+            document.getElementById("prevPage").disabled = currentPage === 0;
+            document.getElementById("nextPage").disabled = end >= projects.length;
+        }
+
+        function changePage(offset) {
+            currentPage += offset;
+            renderProjects();
+        }
+
+        renderProjects();
+    </script>
 </body>
 
 </html>
